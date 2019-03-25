@@ -1,2 +1,2 @@
 # gcp_practise
-Repository contains sample code done in GCP
+Repository contains sample code to do task using gcp tools.
