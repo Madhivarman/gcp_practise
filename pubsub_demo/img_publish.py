@@ -9,7 +9,7 @@ publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(cr.project_id, cr.topic_name)
 
 #global name
-image_path = '/home/madhi/Downloads/test1/'
+image_path = '<path_where_image_directory_is_located>'
 
 for num, image in enumerate(os.listdir(image_path)):
 	#image number
