@@ -1,8 +1,10 @@
 import os
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'gcp_de_exp_pubsub.json'
+#set service account credentials to the os environment
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '<service_account.json>'
 
 #set project_id and topic_name
-project_id = 'gcp-de-exp'
-topic_name = 'streaming_image'
+project_id = '<project_id>'
+topic_name = '<topic_name>'
 
-subscription_name = 'upload_bucket'
+#subscription name
+subscription_name = '<subscription_name>'
