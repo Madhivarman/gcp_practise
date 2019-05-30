@@ -105,27 +105,11 @@ class DriveClient(object):
 		opensheets = gc.copy(fileId)
 		allsheets =  opensheets.worksheets()
 
-		concatdf = pd.DataFrame() #create an empty dataframe
-
 		for num, sheets in enumerate(allsheets):
 			records = opensheets.get_worksheet(num)
 			aslist = records.get_all_values()
 
-			if num == 0:
-				candidate = aslist[5]
-				name, reporting_to = candidate[1], candidate[6] 
-
-			onlyRecords = aslist[6:19]
-			
-			df = pd.DataFrame(onlyRecords)
-
-			concatdf = pd.concat([concatdf, df], axis=0)
-
-		#remove columns where it is null
-		concatdf = concatdf.dropna(axis=1, how='all')
-		concatdf = concatdf.reset_index()
-
-		return concatdf, name, reporting_to
+		return allsheets
 
 
 
