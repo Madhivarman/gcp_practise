@@ -97,7 +97,7 @@ class DriveClient(object):
 
 
 	def read_sheet(self, filename, fileId):
-		credentials = ServiceAccountCredentials.from_json_keyfile_name('GCP-DE-EXP-2c2689c0c14a.json', self.SCOPES)
+		credentials = ServiceAccountCredentials.from_json_keyfile_name('credentials.json', self.SCOPES)
 		gc = gspread.authorize(credentials)
 		
 		#split the sheet name
