@@ -18,7 +18,7 @@ subscription_path = subscriber.subscription_path(
 	cr.project_id, cr.subscription_name)
 
 #define all bucket name
-bucket_name = 'image_from_pubsub'
+bucket_name = '<bucket_name>'
 #bucket storage object name
 storage_client = storage.Client(cr.project_id)
 
