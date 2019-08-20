@@ -1,3 +1,10 @@
+"""
+    Python API to call Machine Learning Services on GCP. This code, explains
+    how to create a training and predicting job in cloud Machine Learning Engine
+    via python client. 
+    
+"""
+
 import argparse
 import subprocess
 import datetime
