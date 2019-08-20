@@ -60,7 +60,10 @@ TRAINING_TIMEOUT = args.training_timeout
 
 logging.info("PARAMS\n")
 
-logging.info("PROJECT ID:{pid} \n, BUCKET NAME:{bid} \n, REGION:{region}")
+logging.info("PROJECT ID:{pid} \n, BUCKET NAME:{bid} \n, REGION:{region}",format(
+                 pid=PROJECT,
+                 bid=BUCKET,
+                 region=REGION))
 
 os.environ['BUCKET'] = BUCKET
 os.environ['PROJECT'] = PROJECT
