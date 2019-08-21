@@ -141,7 +141,7 @@ while (counter <= TRAINING_TIMEOUT):
                 logging.error('There was an error getting the training job status'
                         'check the details:' )
                 
-                logging.error(err.__get_reason())
+                logging.error(err._get_reason())
         
         counter += 60
 
