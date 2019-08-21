@@ -168,6 +168,17 @@ logging.info("MODEL CREATED", response)
 
 time.sleep(120)
 
+"""
+    If the model is built in TensorFlow Estimators, then mentioning output_dir 
+    while training a model will export the saved model automatically to the 
+    gcp bucket. Otherwise, if the model is built on Xgboost we have to write
+    the function to upload the file the specific bucket path and have to mention
+    the absolute path. 
+    
+    And if you are running this program in windows cmd prompt it will throw an
+    error on line 188. As tail was mentioned it's a linux cmd line argument.
+"""
+
 # START CREATING MODEL VERSION IN GOOGLE API
 
 model_id = 'projects/{}/models/{}'.format(PROJECT, model_name)
